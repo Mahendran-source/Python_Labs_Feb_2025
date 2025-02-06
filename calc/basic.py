@@ -22,12 +22,16 @@ def mul(*args):
 def div(x,z):
     return round(x/z,3)
 
-print("Basic Calculator App")
+def main():
+    print("Basic Calculator App")
+    print(f" 4 + 3 = {add(4,3)}")
+    print(f" 4 + 3 + 2 = {add(4,3,2)}")
+    print(f" 4 * 3 = {mul(4,3)}")
+    print(f" 4 * 3 * 2= {mul(4,3,2)}")
+    print(f" 4 / 3 = {div(4,3)}")
+    return None
 
-print(f" 4 + 3 = {add(4,3)}")
-print(f" 4 + 3 + 2 = {add(4,3,2)}")
-print(f" 4 * 3 = {mul(4,3)}")
-print(f" 4 * 3 * 2= {mul(4,3,2)}")
-print(f" 4 / 3 = {div(4,3)}")
-
-sys.exit(0) # Exit program with 0 error
+# Namespace trick
+if __name__== "__main__":
+    main()
+    sys.exit(0) # Exit program with 0 error
